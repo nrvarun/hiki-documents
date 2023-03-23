@@ -17,6 +17,7 @@ import { StyledHeaderSearchInput } from "components/Header/header.style";
 import { useCallback, useState } from "react";
 
 import DocumentsListing from "./DocumentsListing";
+import { NavLink } from "react-router-dom";
 
 type Props = {};
 
@@ -136,21 +137,21 @@ const Tasks = (props: Props) => {
                 textAlign: "center",
               }}
             >
-              <Button variant="contained" startIcon={<UploadOutlined />}>
-                Upload
-              </Button>
+              <NavLink to={"/documents/upload"}>
+                <Button variant="contained" startIcon={<UploadOutlined />}>
+                  Upload
+                </Button>
+              </NavLink>
             </Grid>
           </Grid>
         </StyledMessagesWrapper>
       </Grid>
-      <Grid item xs={12}>
-        <StyledMessagesContentWrapper>
-          <Grid container>
-            <Grid xs={12} item>
-              <DocumentsListing />
-            </Grid>
+      <Grid item xs={12} marginTop={3}>
+        <Grid container>
+          <Grid xs={12} item>
+            <DocumentsListing />
           </Grid>
-        </StyledMessagesContentWrapper>
+        </Grid>
       </Grid>
     </Grid>
   );

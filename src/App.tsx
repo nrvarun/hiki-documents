@@ -29,6 +29,7 @@ const router = createBrowserRouter(
       }
     >
       <Route path="documents" element={<Documents />}></Route>
+      <Route path="documents/upload" element={<DocumentDetails newUpload />} />
       <Route path="documents/:id" element={<DocumentDetails />} />
     </Route>
   )

@@ -10,12 +10,6 @@ export const StyledMessagesWrapper = styled.div`
 `;
 
 export const StyledMessagesContentWrapper = styled.div`
-  background: linear-gradient(
-      0deg,
-      rgba(136, 136, 136, 0.1),
-      rgba(136, 136, 136, 0.1)
-    ),
-    #ffffff;
   padding: 0;
   height: calc(100vh - 260px);
 `;
@@ -82,5 +76,32 @@ export const StyledDocsViewFilterWrapper = styled.div`
         }
       }
     }
+  }
+`;
+
+export const StyledDocsListWrapper = styled.div`
+  a {
+    text-decoration: none;
+  }
+`;
+
+export const StyledDocDropWrapper = styled.div`
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  height: 100%;
+`;
+
+export const StyledDocDrop = styled.div`
+  background: #f8fcff;
+  padding: 15px 20px;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  border: 0.7px dashed #ccd5e7;
+  border-radius: 7.43014px;
+
+  img {
+    margin: auto;
   }
 `;
