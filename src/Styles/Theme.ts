@@ -56,7 +56,7 @@ export const HIKI_THEME = createTheme({
       styleOverrides: {
         // Name of the slot
         root: {
-          border: "1px solid rgba(136, 136, 136, 0.4)",
+          border: "none",
           borderRadius: "8px !important",
         },
         input: {

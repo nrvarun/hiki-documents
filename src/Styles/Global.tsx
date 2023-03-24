@@ -100,3 +100,25 @@ export const StyledFormRadios = styled.div`
     padding: 10px 24px;
   }
 `;
+
+export const StyledFieldTitle = styled.p`
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1c1c1c;
+  margin: 0 0 12px 0;
+
+  span {
+    color: #eb4747;
+  }
+`;
+
+export const StyledRadioLabel = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0 0 0 8px;
+  }
+`;
