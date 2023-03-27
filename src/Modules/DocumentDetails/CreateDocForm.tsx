@@ -117,7 +117,6 @@ const CreateDocForm = ({ control }: Props) => {
                 fullWidth
                 select
                 label=""
-                variant="outlined"
                 defaultValue={CLIENTS[0].title}
                 error={fieldState.error ? true : false}
                 helperText={fieldState.error && "Client is required"}
@@ -193,7 +192,6 @@ const CreateDocForm = ({ control }: Props) => {
             )}
           />
         </Grid>
-
         <Grid item xs={10} marginBottom={4}>
           <StyledFieldTitle>
             Document Type <span> *</span>
