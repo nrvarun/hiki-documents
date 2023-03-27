@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.custom-stepper {
+  background: rgba(136, 136, 136, 0.1);
+  border-radius: 42px;
+
+
+  .MuiStepConnector-line {
+    display: none;
+  }
+
+  .Mui-completed {
+    background-color: #0052CC;
+
+    &.custom-current-step {
+      border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+
+    .MuiStepLabel-root {
+      .MuiSvgIcon-root {
+        color: #fff;
+      }
+
+      svg {
+        border-radius: 0;
+      }
+
+      .MuiStepLabel-label {
+        background-color: transparent;
+        color: #0E1952 !important;
+      }
+    }  
+  }
+
+  .MuiStepLabel-root {
+    position: relative;
+    border-radius: 42px;
+    padding: 12px 24px;
+    // min-height: 32px;
+
+    .MuiStepLabel-labelContainer {
+      position: absolute;
+      bottom: -24px;
+    }
+    
+    .MuiStepLabel-label {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: #888888;
+
+      &.Mui-active {
+        background-color: transparent;
+        color: #0E1952 !important;
+      }  
+    }
+  }
+}
+
+.add-form-stepper {
+  .MuiStep-root {
+
+    .MuiStepLabel-label {
+      color:rgba(136, 136, 136, 0.4)
+    }
+
+    .MuiStepLabel-iconContainer {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      margin: 0 8px 0 0;
+      border-radius: 50%;
+      border: 1px solid rgba(136, 136, 136, 0.4);
+
+      svg {
+        color: rgba(136, 136, 136, 0.4) !important;
+      }
+    }
+  
+    &.custom-current-step {
+
+      .MuiStepLabel-label {
+        color:#0052CC;
+      }
+
+      .MuiStepLabel-iconContainer {
+        background-color: #0052CC !important;
+  
+        svg {
+          color: #fff !important;
+        }
+      }
+  
+    }
+
+    &.Mui-completed {
+
+      .MuiStepLabel-label {
+        color:#44A26C;
+      }
+
+      .MuiStepLabel-iconContainer {
+        background-color: #44A26C;
+      }
+      
+      svg {
+        path {
+          color: #fff !important;
+        }
+      }
+    }
+  
+    
+  } 
+}
+
+.custom-table {
+  .MuiTableHead-root {
+    background: rgba(136, 136, 136, 0.1);
+
+    .MuiTableCell-head {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      color: #1C1C1C;
+    }
+  }
+
+  .MuiTableBody-root {
+    .MuiTableRow-root {
+      .MuiTableCell-root {
+        padding: 20px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        color: #1C1C1C;
+        text-transform: capitalize;
+      }
+
+      .priority {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        color: #EC4176;
+        
+        &.low {
+          color: #13A17E;
+        }
+      }
+    }
+  }
+}
+
+.custom-table-pagination {
+  .MuiTablePagination-toolbar {
+    padding: 10px;
+  }
+
+  .MuiTablePagination-select {
+    text-align: center !important;
+    text-align-last: center !important;
+  }
+}
+
+//UI Input field error fix
+.MuiInputBase-root {
+  &.Mui-error {
+    border-color: #EC4176;
+  }
+
+  fieldset {
+    border: 0;
+  }
+}
