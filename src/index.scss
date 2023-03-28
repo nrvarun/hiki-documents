@@ -183,6 +183,14 @@ code {
     text-align: center !important;
     text-align-last: center !important;
   }
+
+  button {
+    color:#0052CC;
+
+    &.Mui-disabled {
+      color: rgba(0,0,0,0.26);
+    }
+  }
 }
 
 //UI Input field error fix

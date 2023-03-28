@@ -123,4 +123,5 @@ export const StyledAppBody = styled.div`
   width: calc(100% - 240px);
   margin: 0 0 0 auto;
   padding: 120px 36px 36px;
+  min-width: 800px;
 `;

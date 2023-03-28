@@ -1,10 +1,7 @@
 import { Grid } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import {
-  StyledDocDrop,
-  StyledDocDropWrapper,
-  StyledDocsListWrapper,
-} from "./docs.style";
+import { StyledDocsListWrapper } from "./docs.style";
+import DocsTable from "./DocsTable";
 import Document from "./Document";
 
 type Props = {
@@ -48,22 +45,25 @@ const DocumentsListing = ({ view }: Props) => {
   return (
     <StyledDocsListWrapper>
       <Grid container spacing={2}>
-        <Grid item xs={3}>
-          <NavLink to={`/documents/upload`}>
-            <StyledDocDropWrapper>
-              <StyledDocDrop>
-                <img src="/images/doc-drop.svg" alt="doc dropper" />
-              </StyledDocDrop>
-            </StyledDocDropWrapper>
-          </NavLink>
-        </Grid>
-        {SAMPLE_DOCS.map((doc, index) => (
-          <Grid item xs={3} key={doc.id}>
-            <NavLink to={`/documents/${doc.id}`}>
-              <Document url={doc.imgUrl} title={doc.title} type={doc.type} />
-            </NavLink>
+        {view === "grid" ? (
+          <>
+            {SAMPLE_DOCS.map((doc, index) => (
+              <Grid item xs={3} key={doc.id}>
+                <NavLink to={`/documents/${doc.id}`}>
+                  <Document
+                    url={doc.imgUrl}
+                    title={doc.title}
+                    type={doc.type}
+                  />
+                </NavLink>
+              </Grid>
+            ))}
+          </>
+        ) : (
+          <Grid item xs={12}>
+            <DocsTable />
           </Grid>
-        ))}
+        )}
       </Grid>
     </StyledDocsListWrapper>
   );

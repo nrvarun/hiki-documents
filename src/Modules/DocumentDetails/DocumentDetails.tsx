@@ -176,15 +176,16 @@ const DocumentDetails = ({ newUpload }: Props) => {
                 <Grid item xs={12}>
                   <StyledDocDetailsFooter>
                     <Grid container>
-                      <Grid item xs={8}></Grid>
+                      <Grid item xs={4}></Grid>
                       <Grid item xs={2}>
                         <StyledFormCTAOutlined type="button">
                           Cancel
                         </StyledFormCTAOutlined>
                       </Grid>
                       <Grid item xs={2}>
-                        <StyledFormCTA type="submit">Create Task</StyledFormCTA>
+                        <StyledFormCTA type="submit">Upload</StyledFormCTA>
                       </Grid>
+                      <Grid item xs={4}></Grid>
                     </Grid>
                   </StyledDocDetailsFooter>
                 </Grid>
